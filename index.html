@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Escudo Digital</title>
+  <meta name="description" content="Treino simples e gratuito para aprender a reconhecer golpes no WhatsApp, por SMS e por ligação.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Baloo+2:wght@600;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="fontbar" role="group" aria-label="Tamanho da letra">
+    <span>Tamanho da letra</span>
+    <button type="button" id="font-down" aria-label="Diminuir letra">A−</button>
+    <button type="button" id="font-up" aria-label="Aumentar letra">A+</button>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <svg class="shield" viewBox="0 0 120 140" aria-hidden="true">
+        <path d="M60 6 L110 24 V66 C110 100 88 124 60 134 C32 124 10 100 10 66 V24 Z" fill="#ffd23f" stroke="#1b2a4a" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M60 22 L96 35 V66 C96 91 81 108 60 117 Z" fill="#ffb703"/>
+        <path d="M38 70 L54 86 L84 52" fill="none" stroke="#1b2a4a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="hero-text">
+        <h1>Escudo Digital</h1>
+        <p>Aprenda a reconhecer golpes no celular antes de cair neles. É rápido, é de graça e você pode repetir quantas vezes quiser.</p>
+        <a class="btn btn-big" href="#regras">Começar o treino</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="steps" aria-label="Etapas do treino">
+    <a href="#regras" class="step s1"><b>1</b> Regras de ouro</a>
+    <a href="#simulador" class="step s2"><b>2</b> É golpe?</a>
+    <a href="#protecao" class="step s3"><b>3</b> Proteja o celular</a>
+  </nav>
+
+  <main class="wrap">
+
+    <section id="regras" class="block block-blue">
+      <p class="tag">Etapa 1</p>
+      <h2>As 5 regras de ouro</h2>
+      <p class="lead">Guarde estas 5 regras. Elas protegem você da maioria dos golpes.</p>
+      <ul class="rules">
+        <li class="rule r-orange">
+          <span class="ico" aria-hidden="true">⏰</span>
+          <div><strong>Pressa é sinal de golpe</strong><p>"Urgente", "só hoje", "sua conta vai ser bloqueada". O golpista quer que você faça tudo sem pensar.</p></div>
+        </li>
+        <li class="rule r-purple">
+          <span class="ico" aria-hidden="true">🔑</span>
+          <div><strong>Código do SMS é só seu</strong><p>Não passe o código para ninguém: nem banco, nem WhatsApp, nem parente. Quem pede o código quer roubar sua conta.</p></div>
+        </li>
+        <li class="rule r-green">
+          <span class="ico" aria-hidden="true">📞</span>
+          <div><strong>Pediu dinheiro? Ligue antes</strong><p>Se um filho ou amigo "trocou de número" e pede Pix, ligue para o número antigo dele antes de pagar.</p></div>
+        </li>
+        <li class="rule r-red">
+          <span class="ico" aria-hidden="true">🔗</span>
+          <div><strong>Não clique em link estranho</strong><p>Abra o aplicativo do banco ou da loja você mesmo. Nunca pelo link que chegou na mensagem.</p></div>
+        </li>
+        <li class="rule r-blue">
+          <span class="ico" aria-hidden="true">🏦</span>
+          <div><strong>Banco não pede senha por telefone</strong><p>Desligue e ligue você para o número que está atrás do seu cartão.</p></div>
+        </li>
+      </ul>
+      <a class="btn" href="#simulador">Fazer o teste agora</a>
+    </section>
+
+    <section id="simulador" class="block block-coral">
+      <p class="tag">Etapa 2</p>
+      <h2>É golpe ou é seguro?</h2>
+      <p class="lead">Leia cada mensagem como se ela tivesse chegado no seu celular. Depois aperte um dos botões.</p>
+      <div class="sim" id="sim" aria-live="polite"></div>
+    </section>
+
+    <section id="protecao" class="block block-green">
+      <p class="tag">Etapa 3</p>
+      <h2>Proteja seu celular agora</h2>
+      <p class="lead">Faça junto com quem está te ensinando. Marque cada item quando terminar.</p>
+      <div class="meter"><div class="meter-fill" id="meter-fill"></div></div>
+      <p class="meter-text" id="meter-text">0 de 6 feitos</p>
+      <ul class="check" id="check">
+        <li><label><input type="checkbox" id="c1"><span><b>Ativar a confirmação em duas etapas do WhatsApp</b><small>WhatsApp › Configurações › Conta › Confirmação em duas etapas › Ativar. Crie um PIN de 6 números e anote em um lugar seguro.</small></span></label></li>
+        <li><label><input type="checkbox" id="c2"><span><b>Esconder a foto de perfil de quem não é contato</b><small>Configurações › Privacidade › Foto do perfil › Meus contatos. Golpistas copiam sua foto para enganar a família.</small></span></label></li>
+        <li><label><input type="checkbox" id="c3"><span><b>Diminuir o limite do Pix à noite</b><small>No aplicativo do banco, procure "Limites Pix" e baixe o valor entre 20h e 6h.</small></span></label></li>
+        <li><label><input type="checkbox" id="c4"><span><b>Colocar senha ou digital para abrir o celular</b><small>Configurações › Segurança › Bloqueio de tela.</small></span></label></li>
+        <li><label><input type="checkbox" id="c5"><span><b>Combinar uma "palavra secreta" com a família</b><small>Se alguém pedir dinheiro por mensagem, pergunte a palavra. O golpista não sabe.</small></span></label></li>
+        <li><label><input type="checkbox" id="c6"><span><b>Salvar o número do banco que está atrás do cartão</b><small>Assim você liga para o número certo quando receber uma ligação estranha.</small></span></label></li>
+      </ul>
+      <p class="done" id="done" hidden>🎉 Parabéns! Seu celular está muito mais protegido.</p>
+    </section>
+
+    <section class="sos" aria-labelledby="sos-title">
+      <h2 id="sos-title">🚨 Caiu em um golpe? Faça isto na hora</h2>
+      <ol>
+        <li><b>Ligue para o seu banco</b> e peça o bloqueio da conta e o <b>MED</b> (pedido de devolução do Pix).</li>
+        <li><b>Registre um boletim de ocorrência</b> na Delegacia Eletrônica do seu estado.</li>
+        <li><b>Avise a família e os amigos</b> para eles não caírem também.</li>
+      </ol>
+      <p>Não tenha vergonha: golpe acontece com qualquer pessoa. Quanto mais rápido você agir, maior a chance de recuperar o dinheiro.</p>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <p>Projeto de extensão do curso de Ciência da Computação, UNIP. Material educativo e gratuito.</p>
+    <p>As mensagens do teste são exemplos inventados, baseados em golpes comuns no Brasil.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
